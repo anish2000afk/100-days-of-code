@@ -1,0 +1,94 @@
+Addition to both the decks including display for each deck
+Objectives : 
+  1. Hit function 
+  2. Stand function 
+
+HIT FUNCTION: 
+  a)If hit over 21 = > You lose
+
+  b)Hits until a limit i.e> 21
+    b.1) Option to HIT OR STAND
+      b.1.1) Hit again  = > Run b again (# This is the loop)
+  
+k First is never going over 21
+k Question : Where to put for loop? 
+k Yes no ? Yes hit
+: Add random card
+  Total the cards
+  if total exceeds 21 You lose.
+  Else ask if user wants another hit.
+
+Problem with for loop (sequence not conditionals)
+  Idea : create a for loop or a function 
+  First instance of double assignment 
+  and print of the lines
+  while sum < 21:
+    Take yes or no 
+    if answer == 'yes'  
+      add_to_human_deck()
+    else:
+      stand()
+
+How to randomize computer to choose b/w hit or pass:
+While loop to set sum limit to 21
+  random_integer = random.randint(1,2)
+    if 1 the append():
+    
+------------------------------------------------------------------------
+
+Creating a winning function
+  post standing phase
+    if computer / human deck goes over 21:
+      went over 21 
+        X loses
+    if computer / human deck < 21 : 
+      if sum (human) > sum (computer) :
+        print(human wins)
+      else:
+        print(human loses)
+
+
+Creating an over 21 function 
+  First sum < 21 : 
+    Case 1 : sum_human > 21
+      Breaks and runs the sum_computer; 
+      computer_sum > 21;
+      Is ace going to fix it ? 
+        (10, 10) 6 => 26
+        Which means the both go over. Which needs to fixed. TODO
+
+How to make an ace function ? 
+  If adding 11 to original deck makes it exceed 21.
+  Make ace 1
+  Else keep ace 11
+  Issue : 11 is randomly selected.
+    Solution : if append is 11 then make the above function.
+
+Issue with over 21 function 
+  Whether to create a separate if-else statement 
+  OR
+  To add to the previous function ? 
+    
+STAND FUNCTION : 
+  Move to computer randomization.
+  Strategy  
+    Give computer a choice to hit or pass (set randomly)
+    Set the same while loop condition on it (> 21 it loses)
+
+Possible restructure with the bust logic
+  Basic give 2 cards to each structure.
+
+  1st instance: 
+  If < 21 do give hit or break option
+    Wait till stand or if goes over 21.
+  if human_deck is over 21 
+    Revision of previous belief : Players don't go back and forth you only get to play one round.
+    Output: You went over. Bust
+  If human_deck is under < 21 : 
+    Run while loop of computer
+    Run until computer stands or exceeds 21.
+  if computer > 21: 
+     Print"Computer went bust. You lose" 
+
+
+  
